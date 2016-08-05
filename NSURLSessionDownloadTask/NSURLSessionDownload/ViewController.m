@@ -16,11 +16,11 @@
 @implementation ViewController
 
 -(void)viewDidLoad{
-//    RainbowProgress* progress = [[RainbowProgress alloc] init];
-//    [progress startAnimating];
-//    self.view.backgroundColor = [UIColor blackColor];
-//    [self.view addSubview:progress];
-//    self.progress = progress;
+    RainbowProgress* progress = [[RainbowProgress alloc] init];
+    [progress startAnimating];
+    self.view.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:progress];
+    self.progress = progress;
     [self download];
 }
 
@@ -77,22 +77,28 @@
     didFinishDownloadingToURL:(NSURL *)location{
     NSString* fullPath =
     [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]
-            stringByAppendingPathComponent:downloadTask.response.suggestedFilename];;
+            stringByAppendingPathComponent:downloadTask.response.suggestedFilename];
     [[NSFileManager defaultManager] moveItemAtURL:location
                                             toURL:[NSURL fileURLWithPath:fullPath]
                                             error:nil];
     NSData *data = [NSData dataWithContentsOfFile:fullPath];
+    
     NSLog(@"-->%lu",(unsigned long)data.length);
 }
 
 
 // 请求完成，错误调用的代理方法
 -(void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error{
-    NSLog(@"error = %@",error);
+    NSLog(@"error = %@",error.userInfo);
+    if (error) {
+        if (self.resumeData.length == 0) {
+            self.resumeData = error.userInfo[NSURLSessionDownloadTaskResumeData];
+        }
+    }
 }
 
 - (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession *)session{
-    NSLog(@"后台下载完毕");
+    
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     if (appDelegate.backgroundSessionCompletionHandler) {
         void (^completionHandler)() = appDelegate.backgroundSessionCompletionHandler;
