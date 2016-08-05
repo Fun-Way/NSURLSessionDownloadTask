@@ -32,6 +32,8 @@
 +(Class)layerClass{
     return [CAGradientLayer class];
 }
+
+
 #pragma mark - 初始化方法
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -47,6 +49,7 @@
 }
 -(void)setUpRainbowLayer{
     // 1、创建CAGradientLayer彩虹条颜色层，彩虹颜色当然需要数组存储
+    
     CAGradientLayer* gradientLayer = (CAGradientLayer*)self.layer;
     [gradientLayer setStartPoint:CGPointMake(0, 0)];
     [gradientLayer setEndPoint:CGPointMake(1, 0)];
@@ -133,6 +136,7 @@
         self.animating = NO;
     }
 }
+
 #pragma mark - 辅助方法：转移可变数组最后一个元素到数组的最前面
 - (NSArray *)shiftColors:(NSArray *)colors {
     // Moves the last item in the array to the front
