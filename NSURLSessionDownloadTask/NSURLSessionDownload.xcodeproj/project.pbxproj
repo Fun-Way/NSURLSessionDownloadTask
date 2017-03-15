@@ -61,11 +61,11 @@
 		3B07D9AD1C73A0470099DE6E /* NSURLSessionDownload */ = {
 			isa = PBXGroup;
 			children = (
+				3B07D9C51C73A0800099DE6E /* RainbowProgress */,
 				3B07D9B11C73A0470099DE6E /* AppDelegate.h */,
 				3B07D9B21C73A0470099DE6E /* AppDelegate.m */,
 				3B07D9B41C73A0470099DE6E /* ViewController.h */,
 				3B07D9B51C73A0470099DE6E /* ViewController.m */,
-				3B07D9C51C73A0800099DE6E /* RainbowProgress */,
 				3B07D9B71C73A0470099DE6E /* Main.storyboard */,
 				3B07D9BA1C73A0470099DE6E /* Assets.xcassets */,
 				3B07D9BC1C73A0470099DE6E /* LaunchScreen.storyboard */,

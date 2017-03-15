@@ -1,55 +1,70 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gEp-vA-WEZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="wd4-fe-F14">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="gEp-vA-WEZ" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="6kB-Ti-taz"/>
+                        <viewControllerLayoutGuide type="bottom" id="rxo-jz-MCy"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="wGT-yE-8ur">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Io-Az-Qm8">
-                                <rect key="frame" x="44" y="33" width="60" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYM-uJ-LBx">
+                                <rect key="frame" x="26" y="33" width="95" height="30"/>
                                 <state key="normal" title="开始下载">
-                                    <color key="titleColor" red="0.28342305346805841" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.93725490199999995" green="0.3294117647" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="startDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kQ2-yy-Ler"/>
+                                    <action selector="startDownload:" destination="gEp-vA-WEZ" eventType="touchUpInside" id="vwl-f5-09d"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UID-Mr-k5D">
-                                <rect key="frame" x="161" y="33" width="60" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fx2-df-3gG">
+                                <rect key="frame" x="141" y="33" width="94" height="30"/>
                                 <state key="normal" title="取消下载">
-                                    <color key="titleColor" red="0.28342305346805841" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.93725490199999995" green="0.3294117647" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="suspentDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bkx-fT-eeX"/>
+                                    <action selector="suspentDownload:" destination="gEp-vA-WEZ" eventType="touchUpInside" id="Jvx-r9-l24"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAd-mU-H0L">
-                                <rect key="frame" x="271" y="33" width="60" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2U-KQ-IeV">
+                                <rect key="frame" x="255" y="33" width="94" height="30"/>
                                 <state key="normal" title="继续下载">
-                                    <color key="titleColor" red="0.28342305346805841" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.93725490199999995" green="0.3294117647" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="goOnDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TGm-dr-WBB"/>
+                                    <action selector="goOnDownload:" destination="gEp-vA-WEZ" eventType="touchUpInside" id="k7w-dr-GB8"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a2U-KQ-IeV" firstAttribute="leading" secondItem="Fx2-df-3gG" secondAttribute="trailing" constant="20" id="2M9-B8-o1Z"/>
+                            <constraint firstItem="VYM-uJ-LBx" firstAttribute="width" secondItem="Fx2-df-3gG" secondAttribute="width" id="Esj-49-ela"/>
+                            <constraint firstItem="a2U-KQ-IeV" firstAttribute="centerY" secondItem="Fx2-df-3gG" secondAttribute="centerY" id="Ku8-x2-Tv5"/>
+                            <constraint firstItem="Fx2-df-3gG" firstAttribute="centerY" secondItem="VYM-uJ-LBx" secondAttribute="centerY" id="Y4G-2m-zjJ"/>
+                            <constraint firstItem="VYM-uJ-LBx" firstAttribute="leading" secondItem="wGT-yE-8ur" secondAttribute="leadingMargin" constant="10" id="dYb-ci-hQS"/>
+                            <constraint firstItem="Fx2-df-3gG" firstAttribute="leading" secondItem="VYM-uJ-LBx" secondAttribute="trailing" constant="20" id="f73-6I-1Rr"/>
+                            <constraint firstItem="Fx2-df-3gG" firstAttribute="width" secondItem="a2U-KQ-IeV" secondAttribute="width" id="qxV-s8-UX6"/>
+                            <constraint firstItem="VYM-uJ-LBx" firstAttribute="top" secondItem="6kB-Ti-taz" secondAttribute="bottom" constant="13" id="rUp-rh-thb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a2U-KQ-IeV" secondAttribute="trailing" constant="10" id="rsg-zn-wVO"/>
+                        </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="546-jS-N6m" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="380.5" y="260.5"/>
         </scene>

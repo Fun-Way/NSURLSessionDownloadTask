@@ -18,7 +18,6 @@
 -(void)viewDidLoad{
     RainbowProgress* progress = [[RainbowProgress alloc] init];
     [progress startAnimating];
-    self.view.backgroundColor = [UIColor blackColor];
     [self.view addSubview:progress];
     self.progress = progress;
     [self download];
